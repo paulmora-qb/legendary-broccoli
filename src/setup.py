@@ -1,6 +1,8 @@
 from setuptools import find_packages, setup
 
-entry_point = "new-kedro-project = legendary_broccoli.__main__:main"
+entry_point = (
+    "legendary_broccoli = legendary_broccoli.__main__:main"
+)
 
 
 # get the dependencies and installs
@@ -31,7 +33,6 @@ setup(
             "sphinx-autodoc-typehints==1.11.1",
             "sphinx_copybutton==0.3.1",
             "ipykernel>=5.3, <7.0",
-            "Jinja2<3.1.0",
         ]
     },
 )

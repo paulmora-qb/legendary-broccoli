@@ -1,7 +1,7 @@
 [tool.kedro]
 package_name = "legendary_broccoli"
-project_name = "New Kedro Project"
-project_version = "0.18.1"
+project_name = "legendary_broccoli"
+project_version = "0.17.6"
 
 [tool.isort]
 multi_line_output = 3

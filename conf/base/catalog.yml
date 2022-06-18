@@ -3,10 +3,6 @@
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://kedro.readthedocs.io/en/stable/data/data_catalog.html
 
-webdriver:
-  type: pickle.PickleDataSet
-  filepath: "${base_path}/${folders.mdl}/driver.pkl"
-
-images:
-  type: pickle.PickleDataset
+scrapped_images:
+  type: "pandas.ExcelDataSet"
   filepath: "${base_path}/${folders.raw}/images.pkl"

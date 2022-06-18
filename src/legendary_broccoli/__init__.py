@@ -1,4 +1,4 @@
-"""New Kedro Project
+"""legendary_broccoli
 """
 
 __version__ = "0.1"

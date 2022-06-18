@@ -1,15 +1,23 @@
 
-base_path: {{ globals.base_path }}
+datasets:
+  csv: "pandas.CSVDataSet"
+  excel: "pandas.ExcelDataSet"
+  excel_appendable: "pandas.AppendableExcelDataSet"
+  parquet: "pandas.ParquetDataSet"
+  pickle: "pickle.PickleDataSet"
+  spark: "spark.SparkDataSet"
+
+base_path: "./data"
 
 folders:
-  dct: {{ globals.folder_dct }}
-  raw: {{ globals.folder_raw }}
-  int: {{ globals.folder_int }}
-  prm: {{ globals.folder_prm }}
-  ftr: {{ globals.folder_ftr }}
-  mst: {{ globals.folder_mst }}
-  mip: {{ globals.folder_mip }}
-  mdl: {{ globals.folder_mdl }}
-  mop: {{ globals.folder_mop }}
-  eda: {{ globals.folder_eda }}
-  rpt: {{ globals.folder_rpt }}
+  dct: "00_dictionary"
+  raw: "01_raw"
+  int: "02_intermediate"
+  prm: "03_primary"
+  ftr: "04_feature"
+  mst: "05_master_table"
+  mip: "06_model_input"
+  mdl: "07_models"
+  mop: "08_model_output"
+  eda: "09_eda"
+  rpt: "10_reporting"

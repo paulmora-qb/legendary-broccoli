@@ -11,25 +11,13 @@ To run the tests, run ``kedro test`` from the project root directory.
 from pathlib import Path
 
 import pytest
-
-from kedro.framework.project import settings
-from kedro.config import ConfigLoader
 from kedro.framework.context import KedroContext
-from kedro.framework.hooks import _create_hook_manager
 
 
 @pytest.fixture
-def config_loader():
-    return ConfigLoader(conf_source=str(Path.cwd() / settings.CONF_SOURCE))
-
-
-@pytest.fixture
-def project_context(config_loader):
+def project_context():
     return KedroContext(
-        package_name="legendary_broccoli",
-        project_path=Path.cwd(),
-        config_loader=config_loader,
-        hook_manager=_create_hook_manager(),
+        package_name="legendary_broccoli", project_path=Path.cwd()
     )
 
 
@@ -37,5 +25,5 @@ def project_context(config_loader):
 # and should be replaced with the ones testing the project
 # functionality
 class TestProjectContext:
-    def test_project_path(self, project_context):
-        assert project_context.project_path == Path.cwd()
+    def test_package_name(self, project_context):
+        assert project_context.package_name == "legendary_broccoli"

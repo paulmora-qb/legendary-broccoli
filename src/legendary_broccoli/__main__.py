@@ -1,5 +1,5 @@
-"""New Kedro Project file for ensuring the package is executable
-as `new-kedro-project` and `python -m legendary_broccoli`
+"""legendary_broccoli file for ensuring the package is executable
+as `legendary_broccoli` and `python -m legendary_broccoli`
 """
 import importlib
 from pathlib import Path
@@ -20,7 +20,7 @@ def _find_run_command(package_name):
         if run:
             # use run command from installed plugin if it exists
             return run
-        # use run command from `kedro.framework.cli.project`
+        # use run command from the framework project
         from kedro.framework.cli.project import run
 
         return run
@@ -36,11 +36,11 @@ def _find_run_command_in_plugins(plugins):
             return group.commands["run"]
 
 
-def main(*args, **kwargs):
+def main():
     package_name = Path(__file__).parent.name
     configure_project(package_name)
     run = _find_run_command(package_name)
-    run(*args, **kwargs)
+    run()
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 from kedro.pipeline import Pipeline, node
 
-from .scrapping_functions import create_driver, scrapping_images
+from .scrapping_functions import scrapping_images
 
 
 def create_pipeline() -> Pipeline:
@@ -12,16 +12,9 @@ def create_pipeline() -> Pipeline:
 
     nodes = [
         node(
-            func=create_driver,
-            inputs="params:scrapping.webdriver",
-            outputs="webdriver",
-            name="create_webdriver",
-            tags=["scrapping"],
-        ),
-        node(
             func=scrapping_images,
-            inputs=["webdriver", "params:image_scrapping"],
-            outputs="images",
+            inputs="params:scrapping",
+            outputs="scrapped_images",
             name="scrapping_images",
             tags=["scrapping"],
         ),

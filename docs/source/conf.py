@@ -27,7 +27,7 @@ from legendary_broccoli import __version__ as release
 # -- Project information -----------------------------------------------------
 
 project = "legendary_broccoli"
-author = "Kedro"
+author = "QuantumBlack"
 
 # The short X.Y version.
 version = re.match(r"^([0-9]+\.[0-9]+).*", release).group(1)
@@ -150,7 +150,7 @@ latex_documents = [
         master_doc,
         "legendary_broccoli.tex",
         "legendary_broccoli Documentation",
-        "Kedro",
+        "QuantumBlack",
         "manual",
     )
 ]
