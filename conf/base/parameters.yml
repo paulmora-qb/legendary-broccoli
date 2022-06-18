@@ -1,0 +1,7 @@
+
+scrapping:
+  webdriver:
+    driver_path: "/usr/local/bin/chromedriver"
+
+  image_scrapping:
+    url: "https://photos.runthrough.co.uk/search/regents-park-5k-y-10k-june-2022"
