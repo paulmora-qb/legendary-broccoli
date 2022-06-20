@@ -1,6 +1,6 @@
 from kedro.pipeline import Pipeline, node
 
-from .scrapping_functions import scrapping_images
+from .ocr_functions import extracting_ocr
 
 
 def create_pipeline() -> Pipeline:
@@ -12,11 +12,11 @@ def create_pipeline() -> Pipeline:
 
     nodes = [
         node(
-            func=scrapping_images,
-            inputs="params:scrapping",
-            outputs="",
-            name="scrapping_images",
-            tags=["scrapping"],
+            func=extracting_ocr,
+            inputs="params:scrapping.image_scrapping",
+            outputs="ocr_summary",
+            name="extracting_ocr_from_images",
+            tags=["ocr"],
         ),
     ]
 

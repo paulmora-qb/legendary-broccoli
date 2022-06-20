@@ -13,7 +13,7 @@
             "args": [
                 "run",
                 "--pipeline",
-                "scrapping",
+                "applying_ocr",
             ]
         },
         {

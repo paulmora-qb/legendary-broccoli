@@ -3,6 +3,6 @@
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://kedro.readthedocs.io/en/stable/data/data_catalog.html
 
-scrapped_images:
-  type: "pandas.ExcelDataSet"
-  filepath: "${base_path}/${folders.raw}/images.pkl"
+ocr_summary:
+  type: pandas.ExcelDataSet
+  filepath: "${base_path}/${folders.mop}"

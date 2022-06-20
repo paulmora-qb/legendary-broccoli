@@ -9,3 +9,5 @@ scrapping:
   image_scrapping:
     url: "https://photos.runthrough.co.uk/search/regents-park-5k-y-10k-june-2022"
     max_number_of_images: 60
+    image_folder: "./data/01_raw/"
+    rescrape: True
